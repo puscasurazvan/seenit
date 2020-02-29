@@ -13,6 +13,7 @@ describe('VideoWrapper', () => {
     const heading = wrapper.find('h3')
     heading.simulate('click')
     expect(wrapper.find('VideoModal').length).toEqual(1)
+    expect(wrapper.find('EmbeddedVideo').length).toEqual(1)
   })
 
   it('Matches the snapshot', () => {
