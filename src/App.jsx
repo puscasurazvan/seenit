@@ -1,22 +1,9 @@
 import React from 'react'
-import EmbeddedVideo from './components/EmbeddedVideo'
-import Heading from './components/Heading'
-import './App.css'
 
-const videoData = {
-  title: 'Seenit Camera Confidence Video',
-  src: 'https://youtube.com/embed/OMMY3I1PjoI',
-}
+import VideoWrapper from './components/VideoWrapper'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Heading headingText="How to overcome camera shyness" />
-      </header>
-      <EmbeddedVideo video={videoData} />
-    </div>
-  )
+const App = () => {
+  return <VideoWrapper />
 }
 
 export default App

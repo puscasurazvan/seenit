@@ -1,0 +1,19 @@
+.openHeading {
+  font-size: 22px;
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 23px;
+    font-weight: bold;
+    color: red;
+  }
+}
+
+.heading {
+  margin-top: 250px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 15px;
+  color: white;
+  opacity: 0;
+}

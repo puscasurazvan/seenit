@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Heading({ headingText, toggleVideo }) {
+import './Heading.scss'
+
+function Heading({ headingText, toggleVideo, modalOpen }) {
   return (
-    <div onClick={toggleVideo}>
+    <div
+      className={modalOpen ? 'heading' : 'openHeading'}
+      onClick={toggleVideo}
+    >
       <h3>{headingText}</h3>
     </div>
   )
@@ -12,6 +17,7 @@ function Heading({ headingText, toggleVideo }) {
 Heading.propTypes = {
   headingText: PropTypes.string.isRequired,
   toggleVideo: PropTypes.func,
+  modalOpen: PropTypes.bool,
 }
 
 export default Heading
