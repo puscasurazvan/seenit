@@ -1,20 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, lazy, Suspense } from 'react'
 
-import EmbeddedVideo from '../EmbeddedVideo'
 import Heading from '../Heading'
 import VideoModal from '../VideoModal'
 
 import './VideoWrapper.scss'
 
+const EmbeddedVideo = lazy(() => import('../EmbeddedVideo'))
+
 const VideoWrapper = () => {
   const [show, setShow] = useState(false)
 
-  const closeVideo = () => {
-    setShow(false)
-  }
-
-  const openVideo = () => {
-    setShow(true)
+  const toggleVideo = () => {
+    setShow(!show)
   }
 
   const videoData = {
@@ -26,12 +23,14 @@ const VideoWrapper = () => {
     <div id="videoWrapper" className="VideoWrapper">
       <Heading
         headingText="How to overcome camera shyness"
-        toggleVideo={openVideo}
+        toggleVideo={toggleVideo}
         modalOpen={show}
       />
       {show && (
-        <VideoModal open={show} toggle={closeVideo}>
-          <EmbeddedVideo video={videoData} />
+        <VideoModal open={show} toggle={toggleVideo}>
+          <Suspense fallback={'Loading...'}>
+            <EmbeddedVideo video={videoData} />
+          </Suspense>
         </VideoModal>
       )}
     </div>

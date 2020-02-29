@@ -11,6 +11,7 @@ const EmbeddedVideo = ({ video }) => {
         src={video.src}
         height="300px"
         width="500px"
+        frameBorder="0"
       />
     </>
   )
