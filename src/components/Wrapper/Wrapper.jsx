@@ -3,7 +3,7 @@ import React, { useState, lazy, Suspense } from 'react'
 import Heading from '../Heading'
 import VideoModal from '../VideoModal'
 
-import './VideoWrapper.scss'
+import './Wrapper.scss'
 
 const EmbeddedVideo = lazy(() => import('../EmbeddedVideo'))
 

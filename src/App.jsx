@@ -1,9 +1,9 @@
 import React from 'react'
 
-import VideoWrapper from './components/VideoWrapper'
+import Wrapper from './components/Wrapper'
 
 const App = () => {
-  return <VideoWrapper />
+  return <Wrapper />
 }
 
 export default App
