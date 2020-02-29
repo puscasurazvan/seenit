@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import EmbeddedVideo from './components/EmbeddedVideo'
-import Heading from './components/Heading'
-import VideoModal from './components/VideoModal'
+import EmbeddedVideo from '../EmbeddedVideo'
+import Heading from '../Heading'
+import VideoModal from '../VideoModal'
 
 import './VideoWrapper.scss'
 
-const VideoWrapper = ({ children }) => {
+const VideoWrapper = () => {
   const [show, setShow] = useState(false)
 
   const closeVideo = () => {

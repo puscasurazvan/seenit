@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
+
 import { createPortal } from 'react-dom'
+
+import PropTypes from 'prop-types'
+
 import './VideoModal.scss'
 
 const Portal = ({ children }) => {
@@ -32,6 +36,12 @@ const VideoModal = ({ children, toggle, open }) => {
       )}
     </Portal>
   )
+}
+
+VideoModal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
+  children: PropTypes.any,
 }
 
 export default VideoModal
