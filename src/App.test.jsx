@@ -3,8 +3,9 @@ import { mount } from 'enzyme'
 import App from './App'
 
 describe('App', () => {
-  it('Matches the snapshot', () => {
+  it('render without exploding', () => {
     const wrapper = mount(<App />)
+    expect(wrapper.find('VideoWrapper').length).toEqual(1)
     expect(wrapper).toMatchSnapshot()
   })
 })

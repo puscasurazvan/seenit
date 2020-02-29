@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './Heading.scss'
 
-function Heading({ headingText, toggleVideo, modalOpen }) {
+const Heading = ({ headingText, toggleVideo, modalOpen }) => {
   return (
     <div
       className={modalOpen ? 'heading' : 'openHeading'}
