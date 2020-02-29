@@ -19,15 +19,17 @@ const VideoWrapper = () => {
     src: 'https://youtube.com/embed/OMMY3I1PjoI',
   }
 
+  const displayText = 'How to overcome camera shyness'
+
   return (
     <div id="videoWrapper" className="VideoWrapper">
       <Heading
-        headingText="How to overcome camera shyness"
+        headingText={displayText}
         toggleVideo={toggleVideo}
         modalOpen={show}
       />
       {show && (
-        <VideoModal open={show} toggle={toggleVideo}>
+        <VideoModal open={show} toggle={toggleVideo} buttonText={displayText}>
           <Suspense fallback={'Loading...'}>
             <EmbeddedVideo video={videoData} />
           </Suspense>
