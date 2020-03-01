@@ -11,6 +11,7 @@ describe('VideoModal', () => {
   it('should render with the right props', () => {
     const wrapper = mount(<VideoModal {...minProps} />)
     expect(wrapper.props().open).toBe(false)
+    expect(wrapper.find('VideoModal').length).toEqual(1)
   })
 
   it('should render a close button when is opened', () => {

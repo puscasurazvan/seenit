@@ -1,5 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react'
 
+import PropTypes from 'prop-types'
+
 import Heading from '../Heading'
 import VideoModal from '../VideoModal'
 
@@ -7,7 +9,7 @@ import './Wrapper.scss'
 
 const EmbeddedVideo = lazy(() => import('../EmbeddedVideo'))
 
-const VideoWrapper = () => {
+const Wrapper = ({ children }) => {
   const [show, setShow] = useState(false)
 
   const toggleVideo = () => {
@@ -22,7 +24,8 @@ const VideoWrapper = () => {
   const displayText = 'How to overcome camera shyness'
 
   return (
-    <div id="videoWrapper" className="VideoWrapper">
+    <div id="videoWrapper" className="wrapper">
+      {children}
       <Heading
         headingText={displayText}
         toggleVideo={toggleVideo}
@@ -39,4 +42,8 @@ const VideoWrapper = () => {
   )
 }
 
-export default VideoWrapper
+VideoModal.propTypes = {
+  children: PropTypes.any,
+}
+
+export default Wrapper

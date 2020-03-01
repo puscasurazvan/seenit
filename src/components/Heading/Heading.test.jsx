@@ -10,7 +10,9 @@ describe('Heading', () => {
   it('should render with the right props', () => {
     const wrapper = mount(<Heading {...minProps} />)
     expect(wrapper.props().headingText).toEqual('Hello world')
+    expect(wrapper.find('Heading').length).toEqual(1)
   })
+
   it('should render without exploding', () => {
     const wrapper = mount(<Heading {...minProps} />)
     expect(wrapper.length).toEqual(1)

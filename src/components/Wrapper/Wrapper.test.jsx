@@ -15,8 +15,9 @@ describe('Wrapper', () => {
     expect(wrapper.find('VideoModal').length).toEqual(1)
   })
 
-  it('Matches the snapshot', () => {
+  it('should render without exploding', () => {
     const wrapper = mount(<Wrapper />)
+    expect(wrapper.length).toEqual(1)
     expect(wrapper).toMatchSnapshot()
   })
 })
