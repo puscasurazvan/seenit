@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Wrapper from './components/Wrapper'
+import Wrapper from './pages/Wrapper'
 
 const App = () => {
   return <Wrapper />

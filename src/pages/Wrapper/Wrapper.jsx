@@ -2,12 +2,10 @@ import React, { useState, lazy, Suspense } from 'react'
 
 import PropTypes from 'prop-types'
 
-import Heading from '../Heading'
-import VideoModal from '../VideoModal'
+import Heading from '../../components/Heading'
+import VideoModal from '../../components/VideoModal'
 
-import './Wrapper.scss'
-
-const EmbeddedVideo = lazy(() => import('../EmbeddedVideo'))
+const EmbeddedVideo = lazy(() => import('../../components/EmbeddedVideo'))
 
 const Wrapper = ({ children }) => {
   const [show, setShow] = useState(false)
